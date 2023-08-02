@@ -1,0 +1,46 @@
+/*section-first styling*/
+
+.section-first {
+  min-height: 100vh;
+  position: relative;
+  z-index: 100;
+  padding-top: 50px;
+  @include breakpoint(sm) {
+    padding-top: 0;
+  }
+  &__main {
+    padding: 100px 0;
+    &--title {
+      color: $white;
+    }
+  }
+}
+
+.section-first__btn {
+  margin: 0 auto;
+  &--circle {
+    padding: 18px 15px 15px 13px;
+    border: 2px solid rgba($white, 0.5);
+    border-radius: 50%;
+    margin-bottom: 30px;
+    transition: border-color 0.3s ease;
+    &-arrow {
+      display: inline-block;
+      max-width: 18px;
+      width: 100%;
+      transition: stroke 0.3s ease;
+      path {
+        stroke: $white;
+        transition: stroke 0.3s ease;
+      }
+    }
+    &:hover {
+      border-color: $pink-500;
+      path {
+        stroke: $pink-500;
+      }
+    }
+  }
+}
+
+/*end of section-first styling*/

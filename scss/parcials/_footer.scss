@@ -1,0 +1,140 @@
+/*footer styling*/
+
+.footer {
+  padding: 0 0 30px;
+  background-color: $blue-grey;
+  &-wrap {
+    display: grid;
+    grid-template-areas:
+      "address hlegal"
+      "contacts contacts";
+    justify-content: space-between;
+    @media screen and(max-width: 640px) {
+      grid-template-areas:
+        "address"
+        "contacts"
+        "hlegal";
+      justify-content: center;
+    }
+    border-top: 2px solid $indigo-50;
+  }
+  &-content {
+    margin: 30px 0 21px;
+    &__address {
+      display: flex;
+      gap: 10px;
+      grid-area: address;
+      @media screen and(max-width: 640px) {
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      &--text {
+        list-style: none;
+        @media screen and(max-width: 640px) {
+          margin: 0 auto;
+        }
+      }
+
+      &--map {
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.map {
+  transition: all 0.3s ease;
+  &:hover {
+    color: $pink-500;
+  }
+}
+
+.footer {
+  &-contacts {
+    display: flex;
+    grid-area: contacts;
+    gap: 10px;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @media screen and(max-width: 640px) {
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      &--object {
+        list-style: none;
+      }
+      &--tell {
+        color: $purple-navy;
+      }
+      &--mail {
+        color: $blue-500;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $pink-500;
+        }
+      }
+    }
+  }
+}
+
+.text-up {
+  text-transform: uppercase;
+}
+
+.footer-text {
+  justify-content: end;
+  grid-area: hlegal;
+  margin-top: 30px;
+  white-space: nowrap;
+  @media screen and(max-width: 640px) {
+    justify-content: center;
+  }
+}
+
+.footer-separator {
+  @media screen and(max-width: 640px) {
+    display: none;
+  }
+}
+
+/* second footer styling*/
+
+.second-footer {
+  padding: 0 0 30px;
+  background-color: $blue-grey;
+  &__wrap {
+    border-top: none;
+    display: grid;
+    grid-template-areas:
+      "address hlegal"
+      "contacts contacts";
+    justify-content: space-between;
+    @include breakpoint(md) {
+      grid-template-areas:
+        "address"
+        "contacts"
+        "hlegal";
+      justify-content: center;
+    }
+  }
+}
+
+.second-footer__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  grid-area: hlegal;
+  margin-top: 30px;
+  white-space: nowrap;
+  @media screen and(max-width: 640px) {
+    justify-content: center;
+  }
+}
+
+.footer-line {
+  border-top: 2px solid$grey-500;
+}

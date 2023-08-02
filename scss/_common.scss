@@ -1,0 +1,65 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+$container-width--xxl: 1600px;
+$container-width--xl: 1320px;
+$container-width--lg: 904px;
+$container-width--md: 648px;
+$container-width--sm: 546px;
+$container-width--xs: 315px;
+$container-space: 15px;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $container-space;
+  @media screen and(min-width: 1921px) {
+    max-width: $container-width--xxl + ($container-space * 2);
+  }
+  @media screen and(max-width: 1920px) {
+    max-width: $container-width--xxl + ($container-space * 2);
+  }
+  @media screen and(max-width: 1440px) {
+    max-width: $container-width--xl + ($container-space * 2);
+  }
+  @media screen and(max-width: 1024px) {
+    max-width: $container-width--lg + ($container-space * 2);
+  }
+  @media screen and(max-width: 768px) {
+    max-width: $container-width--md + ($container-space * 2);
+  }
+  @media screen and(max-width: 576px) {
+    max-width: $container-width--sm + ($container-space * 2);
+  }
+  @media screen and(max-width: 375px) {
+    max-width: $container-width--xs + ($container-space * 2);
+  }
+}
+
+.container-lg {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  @media screen and(min-width: 1921px) {
+    max-width: 1720px + ($container-space * 2);
+  }
+  @media screen and(max-width: 1920px) {
+    max-width: 1720px + ($container-space * 2);
+  }
+  @media screen and(max-width: 1440px) {
+    max-width: 1440px;
+  }
+  @media screen and(max-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media screen and(max-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and(max-width: 576px) {
+    max-width: 576px;
+  }
+  @media screen and(max-width: 375px) {
+    max-width: 375px;
+  }
+}

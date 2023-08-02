@@ -1,0 +1,187 @@
+// breackpoints
+$xs: 375px;
+$sm: 576px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1440px;
+$xxl: 1920px;
+
+// columns
+$col-gutter: 15px;
+$gd-col: 12;
+$gd-size: calc(100% / $gd-col);
+
+@for $i from 1 through $gd-col {
+  .col-#{$i} {
+    width: $gd-size * $i;
+    padding: 0 $col-gutter;
+  }
+}
+
+@media screen and (min-width: $lg) {
+  @for $i from 1 through $gd-col {
+    .col-lg-#{$i} {
+      width: $gd-size * $i;
+      padding: 0 $col-gutter;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  @for $i from 1 through $gd-col {
+    .col-md-#{$i} {
+      width: $gd-size * $i;
+      padding: 0 $col-gutter;
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  @for $i from 1 through $gd-col {
+    .col-sm-#{$i} {
+      width: $gd-size * $i;
+      padding: 0 $col-gutter;
+    }
+  }
+}
+
+// colors
+
+$dark-blue_gradient: linear-gradient(
+  228.57deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
+$red_gradient: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
+$pink_gradient: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+$orange-gradient: linear-gradient(0deg, #f48b30, #f48b30), #f48b30;
+$white: #ffffff;
+$pink-500: #f0145a;
+$orange-500: #fd9339;
+$red-800: #c71c36;
+$grey-200: #eaeaea;
+$grey-300: #e2e2e4;
+$grey-400: #b3b3ba;
+$grey-500: #ededf7;
+$blue-grey-900: #143646;
+$light-blue-50: #dcf3f9;
+$blue-500: #24a3ff;
+$blue-grey: #f5f5fa;
+$blue-900: #1c4280;
+$indigo-50: #e6e6f0;
+$indigo-200: #cacadb;
+$indigo-100: #e7e7f2;
+$indigo-900: #323264;
+$indigo-dye: #1d4568;
+$purple: #9e4dc3;
+$purple-navy: #46466e;
+$dark-purple-900: #282240;
+$black: #000000;
+
+// partners bg colors
+
+.icon__blue-900 {
+  background-color: $blue-900;
+}
+.icon__blue-grey-900 {
+  background-color: $blue-grey-900;
+}
+.icon__orange-gradient {
+  background: $orange-gradient;
+}
+.icon__purple {
+  background-color: $purple;
+}
+.icon__orange-500 {
+  background-color: $orange-500;
+}
+.icon__grey-300 {
+  background-color: $grey-300;
+}
+.icon__red-800 {
+  background-color: $red-800;
+}
+.icon__light-blue-50 {
+  background-color: $light-blue-50;
+}
+.icon__grey-200 {
+  background-color: $grey-200;
+}
+.icon__dark-purple-900 {
+  background-color: $dark-purple-900;
+}
+.icon__indigo-dye {
+  background-color: $indigo-dye;
+}
+.icon__black {
+  background-color: $black;
+}
+.icon__blue-500 {
+  color: $blue-500;
+}
+.icon__grey-400 {
+  color: $grey-400;
+}
+.icon__purple-navy {
+  color: $purple-navy;
+}
+.services-link--marker::marker {
+  color: $pink-500;
+}
+.text-grey {
+  color: $grey-400;
+}
+.text-white {
+  color: $white;
+}
+.text-blue-500 {
+  color: $blue-500;
+}
+.text-indigo-900 {
+  color: $indigo-900;
+}
+.h2-active {
+  color: $pink-500;
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.address-hover,
+.tel-hover {
+  transition: all 0.3s ease;
+  &:hover {
+    color: $pink-500;
+  }
+}
+
+// @media breakpoints
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media screen and (max-width: 375px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  } @else if $point == xxl {
+    @media (max-width: 1630px) {
+      @content;
+    }
+  }
+}

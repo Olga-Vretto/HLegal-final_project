@@ -1,0 +1,140 @@
+/* section-team styling*/
+
+.section-team {
+  padding: 60px 0 0;
+  &-slides {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__content {
+    width: 100%;
+    background-color: $blue-grey;
+    border-radius: 12px;
+    @media screen and(max-width: 930px) {
+      flex-direction: column;
+    }
+    &--image {
+      max-width: 400px;
+      height: 298px;
+      @include breakpoint(xl) {
+        height: 344px;
+      }
+      @media screen and(max-width: 1262px) {
+        height: 379px;
+      }
+      @include breakpoint(lg) {
+        height: 528px;
+      }
+      @media screen and(max-width: 930px) {
+        max-width: 560px;
+        margin: 0 auto;
+      }
+      @include breakpoint(md) {
+        max-width: 648px;
+        height: 500px;
+      }
+      @include breakpoint(sm) {
+        max-width: 400px;
+      }
+      @media screen and(max-width: 450px) {
+        max-width: 315px;
+      }
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px 0px 0px 12px;
+        @media screen and(max-width: 930px) {
+          border-radius: 12px 12px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.section-team__content--text {
+  margin: 30px 0 30px 30px;
+  &__link {
+    color: $blue-500;
+    stroke: $blue-500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $pink-500;
+      stroke: $pink-500;
+    }
+  }
+  &-txt {
+    max-width: 1140px;
+    width: 100%;
+    color: $pink-500;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    overflow-wrap: break-word;
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+    @include breakpoint(xl) {
+      max-width: 860px;
+    }
+    @media screen and(max-width: 1024px) {
+      max-width: 444px;
+    }
+    @media screen and(max-width: 930px) {
+      max-width: 52rem;
+    }
+    @media screen and(max-width: 375px) {
+      max-width: 255px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  &-name {
+    color: $grey-400;
+    margin-bottom: 6px;
+  }
+  &-position {
+    color: $grey-400;
+  }
+}
+
+.arrow {
+  stroke: $blue-500;
+  transition: all 0.3s ease;
+  &:hover {
+    stroke: $pink-500;
+  }
+}
+
+.carousel-circle-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.btn-circle {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  background-color: $blue-500;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.circle-active {
+  opacity: 1;
+}
+
+/* end of section-team styling */

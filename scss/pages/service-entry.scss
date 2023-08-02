@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@import "../reset";
+@import "../common";
+@import "../var";
+@import "../typography";
+
+.section-first__wrap {
+  padding: 50px 0 30px;
+  @include breakpoint(sm) {
+    padding: 0 0 40px;
+  }
+}
+@include breakpoint(sm) {
+  .section-first__header::after {
+    content: "";
+    background-color: rgba(245, 245, 250, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+  }
+}
+
+.header-grid__logo {
+  align-items: flex-start;
+  @include breakpoint(sm) {
+    align-items: center;
+  }
+  &--icon {
+    margin-right: 4px;
+  }
+  &-slash {
+    @include breakpoint(sm) {
+      width: 11.62px;
+      height: 26px;
+    }
+  }
+  &--txt {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    @include breakpoint(sm) {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+.address {
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+
+.header-grid__nav-list--item__link:hover {
+  color: $white;
+  border-bottom: 2px solid $white;
+}
+
+.main {
+  flex-grow: 1;
+  &-icon {
+    margin: 0 auto;
+    &__svg {
+      width: 92px;
+      height: 92px;
+      border-radius: 24px;
+      background-color: $white;
+      padding: 14px;
+      margin-bottom: 28px;
+    }
+  }
+  &-content {
+    text-align: center;
+    padding-bottom: 60px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    &__title {
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 28px;
+    }
+    &__text {
+      margin: 0 auto 28px;
+      @include breakpoint(xl) {
+        max-width: 1080px;
+      }
+    }
+    &__btn-popup {
+      width: 208px;
+      height: 56px;
+      padding: 18px 30px;
+      background-color: $blue-500;
+      box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+      border-radius: 12px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+}
+
+/* services styling*/
+.services {
+  padding: 30px 0 60px 15px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+    display: flex;
+    gap: 60px;
+    @include breakpoint(sm) {
+      flex-wrap: wrap;
+    }
+    &--list {
+      max-width: 636px;
+      width: 100%;
+      list-style: initial;
+      &-link {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+/* section-publication styling */

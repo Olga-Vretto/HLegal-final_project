@@ -1,0 +1,42 @@
+/* section-companies styling */
+
+.section-companies {
+  padding-top: 60px;
+  &__title {
+    align-items: center;
+    color: $indigo-900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 120px);
+    border-radius: 12px;
+    overflow: hidden;
+    @media screen and(max-width: 1750px) {
+      border-radius: 0;
+    }
+    @media screen and(max-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 120px);
+    }
+    @media screen and(max-width: 720px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 120px);
+    }
+    @media screen and(max-width: 600px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 120px);
+    }
+  }
+}
+.company-card {
+  display: flex;
+}
+.none {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+/* end of section-companies styling */
